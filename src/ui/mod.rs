@@ -145,12 +145,13 @@ where
   );
 
   let input_string: String = app.input.iter().collect();
+  // let input_string = String::from("MoonRock");
   let lines = Text::from((&input_string).as_str());
   let input = Paragraph::new(lines).block(
     Block::default()
       .borders(Borders::ALL)
       .title(Span::styled(
-        "Search",
+        "This has been changed",
         get_color(highlight_state, app.user_config.theme),
       ))
       .border_style(get_color(highlight_state, app.user_config.theme)),

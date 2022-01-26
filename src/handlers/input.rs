@@ -71,6 +71,10 @@ pub fn handler(key: Key, app: &mut App) {
     Key::Enter => {
       let input_str: String = app.input.iter().collect();
 
+      app.input = vec![];
+      app.input_idx = 0;
+      app.input_cursor_position = 0;
+
       process_input(app, input_str);
     }
     Key::Char(c) => {
